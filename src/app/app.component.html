@@ -1,0 +1,23 @@
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #start>
+        <mat-nav-list>
+            <a mat-list-item>
+                <mat-icon>account_circle</mat-icon>
+                <span [hidden]="needsLogin()" routerLink="/login">Login</span>
+                <span [hidden]="!needsLogin()">LogOut</span>
+            </a>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-toolbar color="primary">
+        <button mat-icon-button (click)="start.open('mouse')">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+</mat-sidenav-container>

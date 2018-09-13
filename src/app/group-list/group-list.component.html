@@ -1,0 +1,25 @@
+
+
+<mat-card *ngFor="let group of groups" class="group-card mat-elevation-z10">
+
+    <mat-card-header>
+
+        <mat-card-title>GROUP ID :: {{group.id}}</mat-card-title>
+
+    </mat-card-header>
+
+    <img mat-card-image>
+
+    <mat-card-content>
+        <p>GROUP NAME :: {{group.name}}</p>
+    </mat-card-content>
+
+    <mat-card-actions class="group-actions">
+
+        <button mat-button class="mat-raised-button mat-primary" [routerLink]="['/group', group.id]">
+            VIEW GROUP USERS
+        </button>
+
+    </mat-card-actions>
+
+</mat-card>

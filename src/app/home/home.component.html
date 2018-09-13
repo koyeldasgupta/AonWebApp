@@ -1,0 +1,15 @@
+
+<div class="groups-panel">
+<h1>Welcome!</h1>
+<img class="course-image mat-elevation-z10"
+     src="../assets/aon_shared_logo.jpg" width="300" height="200">
+    <mat-card class="example-card">
+    <ul>
+    <li><a  [hidden]="isAdmin()" routerLink="/usersList">Users List</a></li>
+     <li> <a  [hidden]="isAdmin()" routerLink="/allGroups">Groups List</a></li>
+      <li>  <a  [hidden]="isAdmin()" routerLink="/assign">Group Assign</a></li>
+       <li>  <a  routerLink="/about">My Profile</a></li>
+    </ul>     
+    </mat-card>
+</div>
+

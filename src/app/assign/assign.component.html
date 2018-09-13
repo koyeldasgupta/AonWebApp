@@ -1,0 +1,21 @@
+<div>
+
+<mat-form-field>
+    <mat-select placeholder="Group" [(ngModel)]="selectedValue" name="group">
+      <mat-option *ngFor="let group of groups" [value]="group.id">
+        {{group.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> 
+</div>
+<div>
+  <mat-form-field>
+    <mat-select placeholder="Users" [(ngModel)]="selectedUser" name="user">
+      <mat-option *ngFor="let user of users" [value]="user.id">
+        {{user.userName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<button mat-raised-button (click)="updateProfile()" color="primary">Assign</button>
+ 
